@@ -6,14 +6,47 @@ body {
     padding: 0;
 }
 
+/* Skip to main content link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000000;
+    color: #ffffff;
+    padding: 8px;
+    z-index: 100;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 header {
     background-color: #1a252f;
     padding: 20px;
 }
 
+/* Navigation layout */
 nav {
     background-color: #2c3e50;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav img {
+    width: 10%;
+    height: auto;
 }
 
 main {
@@ -33,10 +66,12 @@ footer p {
     color: #ffffff;
 }
 
+/* Deactivate old li rule as requested in Week 2
 li {
     display: inline-block;
     width: 120px;
 }
+*/
 
 h1 {
     text-align: center;
@@ -49,6 +84,34 @@ p {
     color: #222222;
 }
 
-a, a:link, a:visited, a:hover, a:active {
-    color: #ffffff !important;
+/* Navigation & Header links */
+header a, nav a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Footer link contrast fix */
+footer a {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+/* Grid layout for neighborhood.html */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+}
+
+/* Flex layout for parks.html */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
